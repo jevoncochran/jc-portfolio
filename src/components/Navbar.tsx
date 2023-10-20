@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import SocialIcon from "./SocialIcon";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -12,6 +13,13 @@ const navLinks = [
   { title: "Projects", href: "/projects" },
   { title: "Skills", href: "/skills" },
   { title: "Contact", href: "/contact" },
+];
+
+const socialIcons = [
+  { icon: <FaLinkedinIn /> },
+  { icon: <FaGithub /> },
+  { icon: <AiOutlineMail /> },
+  { icon: <BsFillPersonLinesFill /> },
 ];
 
 const Navbar = () => {
@@ -87,18 +95,14 @@ const Navbar = () => {
                   Let's Connect
                 </p>
                 <div className="flex items-center justify-between w-full sm:w-[80%] my-4 ">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                    <FaGithub />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                    <AiOutlineMail />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                    <BsFillPersonLinesFill />
-                  </div>
+                  {socialIcons.map((si, idx) => (
+                    <SocialIcon
+                      key={idx}
+                      icon={si.icon}
+                      padding={3}
+                      scale={105}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
