@@ -30,3 +30,7 @@ li {
 button {
   @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-tr from-[#5651e5] to-[#709dff] text-white;
 }
+
+.section-header {
+  @apply text-xl tracking-widest uppercase text-[#5651e5];
+}
