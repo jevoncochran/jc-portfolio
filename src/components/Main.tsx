@@ -1,15 +1,4 @@
-import React from "react";
-import { AiOutlineMail } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import SocialIcon from "./SocialIcon";
-
-const socialIcons = [
-  { icon: <FaLinkedinIn /> },
-  { icon: <FaGithub /> },
-  { icon: <AiOutlineMail /> },
-  { icon: <BsFillPersonLinesFill /> },
-];
+import SocialIconContainer from "./SocialIconContainer";
 
 const Main = () => {
   return (
@@ -29,10 +18,8 @@ const Main = () => {
             I'm focused on building responsive front-end web applications while
             learning back-end technologies.
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-6">
-            {socialIcons.map((si, idx) => (
-              <SocialIcon key={idx} icon={si.icon} />
-            ))}
+          <div className="max-w-[330px] m-auto py-6">
+            <SocialIconContainer />
           </div>
         </div>
       </div>

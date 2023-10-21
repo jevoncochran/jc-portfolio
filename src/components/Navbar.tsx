@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import SocialIcon from "./SocialIcon";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import SocialIconContainer from "./SocialIconContainer";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -15,22 +13,33 @@ const navLinks = [
   { title: "Contact", href: "/contact" },
 ];
 
-const socialIcons = [
-  { icon: <FaLinkedinIn /> },
-  { icon: <FaGithub /> },
-  { icon: <AiOutlineMail /> },
-  { icon: <BsFillPersonLinesFill /> },
-];
-
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const toggleMobileNav = () => {
     setShowMobileNav(!showMobileNav);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-50 bg-white">
+    <div
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-50 bg-white"
+          : "fixed w-full h-20 z-50 bg-white"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <h1>JC</h1>
         <div>
@@ -87,22 +96,14 @@ const Navbar = () => {
                   <Link key={idx} href={nl.href}>
                     <li className="py-4 text-sm">{nl.title}</li>
                   </Link>
-                  //   <p key={idx}>Hello World</p>
                 ))}
               </ul>
               <div className="pt-40">
                 <p className="uppercase tracking-widest text-[#5651e5]">
                   Let's Connect
                 </p>
-                <div className="flex items-center justify-between w-full sm:w-[80%] my-4 ">
-                  {socialIcons.map((si, idx) => (
-                    <SocialIcon
-                      key={idx}
-                      icon={si.icon}
-                      padding={3}
-                      scale={105}
-                    />
-                  ))}
+                <div className="w-full sm:w-[80%] my-4 ">
+                  <SocialIconContainer padding={3} scale={105} />
                 </div>
               </div>
             </div>
