@@ -24,7 +24,7 @@ const ProjectCard = ({ image, name, projectType, url }: ProjectCardProps) => {
         </h3>
         <p className="pb-4 pt-2 text-white text-center">{projectType}</p>
         <Link href={`/projects/${url}`}>
-          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
+          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer min-w-[150px]">
             More Info
           </p>
         </Link>

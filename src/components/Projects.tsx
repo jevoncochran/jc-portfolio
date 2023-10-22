@@ -13,11 +13,12 @@ const projects = [
     projectType: "Next.js",
     url: "google-jocs",
   },
+  { name: "Campr", image: "campr.png", projectType: "Next.js", url: "campr" },
 ];
 
 const Projects = () => {
   return (
-    <div className="w-full md:min-h-screen">
+    <div id="projects" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="section-header">Projects</p>
         <h2 className="py-4">What I've Built</h2>

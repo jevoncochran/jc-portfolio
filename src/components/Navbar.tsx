@@ -6,11 +6,11 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import SocialIconContainer from "./SocialIconContainer";
 
 const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
-  { title: "Projects", href: "/projects" },
-  { title: "Skills", href: "/skills" },
-  { title: "Contact", href: "/contact" },
+  { title: "Home", href: "/#home" },
+  { title: "About", href: "/#about" },
+  { title: "Skills", href: "/#skills" },
+  { title: "Projects", href: "/#projects" },
+  { title: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -45,12 +45,10 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex">
             {navLinks.map((nl, idx) => (
-              <Link
-                key={idx}
-                href={nl.href}
-                className="ml-10 uppercase text-sm pb-2 hover:border-b"
-              >
-                {nl.title}
+              <Link key={idx} href={nl.href}>
+                <li className="ml-10 uppercase text-sm pb-2 hover:border-b">
+                  {nl.title}
+                </li>
               </Link>
             ))}
           </ul>
