@@ -15,8 +15,7 @@ const ProductPage = ({ params }: { params: { slug: string } }) => {
       <div className="w-full h-auto relative col-span-1">
         <Image
           src={`/assets/projects/${selectedProject?.image}`}
-          alt={selectedProject?.name}
-          // layout="fill"
+          alt={selectedProject?.name as string}
           width={400}
           height={300}
           objectFit="cover"
