@@ -1,20 +1,5 @@
 import ProjectCard from "./ProjectCard";
-
-const projects = [
-  {
-    name: "JCommerce",
-    image: "jcommerce1.png",
-    projectType: "Next.js",
-    url: "jcommerce",
-  },
-  {
-    name: "Google Jocs",
-    image: "googlejocs1.png",
-    projectType: "Next.js",
-    url: "google-jocs",
-  },
-  { name: "Campr", image: "campr.png", projectType: "Next.js", url: "campr" },
-];
+import { PROJECTS } from "@/constants";
 
 const Projects = () => {
   return (
@@ -23,7 +8,7 @@ const Projects = () => {
         <p className="section-header">Projects</p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+          {PROJECTS.map((project, idx) => (
             <ProjectCard key={idx} project={project} />
           ))}
         </div>

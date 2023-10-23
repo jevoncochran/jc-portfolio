@@ -4,7 +4,7 @@ import SocialIconContainer from "./SocialIconContainer";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen pt-28">
+    <div id="contact" className="w-full lg:h-screen py-28">
       <div className="max-w-[1240px] m-auto px-2 w-full">
         <p className="section-header">Contact</p>
         <h2 className="py-4">Get In Touch</h2>
@@ -79,7 +79,7 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 border-gray-300"
                   />
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
+                <button className="primary-btn w-full p-4 text-gray-100 mt-4">
                   Send Message
                 </button>
               </form>
