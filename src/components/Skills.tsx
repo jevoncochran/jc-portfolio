@@ -3,7 +3,7 @@ import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <div id="skills" className="w-full lg:min-h-screen pt-28">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="section-header">Skills</p>
         <h2 className="py-4">What I Can Do</h2>
@@ -18,7 +18,6 @@ const Skills = () => {
           <SkillCard image="tailwindcss.png" name="Tailwind CSS" />
           <SkillCard image="stripe.png" name="Stripe" />
           <SkillCard image="firebase.png" name="Firebase" />
-          <SkillCard image="stripe.png" name="Stripe" />
           <SkillCard image="materialui.png" name="Material UI" />
           <SkillCard image="chakraui.png" name="Chakra UI" />
           <SkillCard image="googlecloud.png" name="Google Cloud" />

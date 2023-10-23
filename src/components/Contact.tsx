@@ -4,8 +4,8 @@ import SocialIconContainer from "./SocialIconContainer";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+    <div id="contact" className="w-full lg:h-screen pt-28">
+      <div className="max-w-[1240px] m-auto px-2 w-full">
         <p className="section-header">Contact</p>
         <h2 className="py-4">Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">

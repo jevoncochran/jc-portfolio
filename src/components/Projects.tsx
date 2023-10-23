@@ -18,19 +18,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
+    <div id="projects" className="w-full pt-28">
+      <div className="max-w-[1240px] mx-auto px-2">
         <p className="section-header">Projects</p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
-            <ProjectCard
-              key={idx}
-              name={project.name}
-              image={project.image}
-              projectType={project.projectType}
-              url={project.url}
-            />
+            <ProjectCard key={idx} project={project} />
           ))}
         </div>
       </div>
