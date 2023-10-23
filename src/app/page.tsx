@@ -6,7 +6,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen relative">
       <Main />
       <About />
       <Skills />
