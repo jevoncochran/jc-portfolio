@@ -35,18 +35,16 @@ const ProductPage = ({ params }: { params: { slug: string } }) => {
 
       <div className="col-span-1">
         <h2 className="text-center">{selectedProject?.name}</h2>
-        <p className="py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div className="py-8">
+          {selectedProject?.overview?.map((paragraph: string, idx: number) => (
+            <p key={idx} className="mt-2 first:mt-0">
+              {paragraph}
+            </p>
+          ))}
+        </div>
         <div className="flex gap-4 flex-wrap">
           {selectedProject?.technologies.map((tech, idx) => (
-            <div key={idx} className="bg-gray-200 p-2 rounded-xl">
+            <div key={idx} className="bg-gray-300 p-2 rounded-xl">
               {tech}
             </div>
           ))}
