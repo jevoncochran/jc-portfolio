@@ -1,18 +1,23 @@
-import React from "react";
+import Link from "next/link";
 
 interface SocialIconProps {
   icon: JSX.Element;
   padding: number;
   scale: number;
+  href: string;
 }
 
-const SocialIcon = ({ icon, padding, scale }: SocialIconProps) => {
+const SocialIcon = ({ icon, padding, scale, href }: SocialIconProps) => {
   return (
-    <div
-      className={`rounded-full shadow-lg shadow-gray-400 p-${padding} cursor-pointer hover:scale-${scale} ease-in duration-500`}
-    >
-      {icon}
-    </div>
+    <Link href={href} legacyBehavior passHref>
+      <a target="_blank">
+        <div
+          className={`rounded-full shadow-lg shadow-gray-400 p-${padding} cursor-pointer hover:scale-${scale} ease-in duration-500`}
+        >
+          {icon}
+        </div>
+      </a>
+    </Link>
   );
 };
 

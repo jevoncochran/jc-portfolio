@@ -10,8 +10,8 @@ const Contact = () => {
         <h2 className="py-4">Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
-            <div className="lg:p-4 h-full">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl">
+            <div className="lg:px-4 h-full">
               <div>
                 <Image
                   src="/assets/contact/headshot2.jpg"
@@ -21,7 +21,7 @@ const Contact = () => {
                   className="rounded-xl ease-in duration-300 pb-2"
                 />
               </div>
-              <div className="py-2">
+              <div className="">
                 <h2>Jevon Cochran</h2>
                 <p>Full Stack Web Developer</p>
                 <p className="py-4">
@@ -29,17 +29,17 @@ const Contact = () => {
                   and let's talk.
                 </p>
               </div>
-              <div className="lg:w-[70%]">
+              {/* <div className="lg:w-[70%]">
                 <p className="uppercase pt-8 pb-2">Connect With Me</p>
                 <SocialIconContainer padding={4} scale={105} />
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-            <div className="p-4">
-              <form>
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:px-4 flex flex-col">
+            <div className="flex flex-1">
+              <form className="flex flex-col flex-1 pb-4">
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
@@ -79,9 +79,11 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 border-gray-300"
                   />
                 </div>
-                <button className="primary-btn w-full p-4 text-gray-100 mt-4">
-                  Send Message
-                </button>
+                <div className="flex flex-1 items-end">
+                  <button className="primary-btn w-full p-4 text-gray-100 mt-4">
+                    Send Message
+                  </button>
+                </div>
               </form>
             </div>
           </div>
