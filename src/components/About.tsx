@@ -12,7 +12,7 @@ const About = () => {
           <p className="section-header">About</p>
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-600">
-            // A Developer With Entreprenuerial Drive
+            {"// A Developer With Entreprenuerial Drive"}
           </p>
           <p className="py-2 text-gray-600">
             I'm a versatile Full Stack Web Developer, equally passionate about
