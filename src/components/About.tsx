@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full md:h-full p-2 pt-28 md:pt-20 flex items-center"
+      className="w-full md:h-full px-8 pt-28 md:pt-20 flex items-center"
     >
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
@@ -14,6 +14,7 @@ const About = () => {
           <p className="py-2 text-gray-600">
             {"// A Developer With Entreprenuerial Drive"}
           </p>
+          <p className="py-2 text-gray-600">My name is Jevon Cochran.</p>
           <p className="py-2 text-gray-600">
             I'm a versatile Full Stack Web Developer, equally passionate about
             crafting exceptional frontend user interfaces and robust backends.

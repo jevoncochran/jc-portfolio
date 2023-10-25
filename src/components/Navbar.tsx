@@ -72,13 +72,20 @@ const Navbar = () => {
         <div
           className={
             showMobileNav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 bg-[#ecf0f3] p-10 ease-in duration-500"
           }
         >
           <div>
             <div className="flex items-center justify-between w-full">
-              <h1>JC</h1>
+              <div>
+                <Image
+                  src="/assets/nav/logo.png"
+                  alt="JC"
+                  width={80}
+                  height={80}
+                />
+              </div>
               <div
                 onClick={toggleMobileNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -95,12 +102,17 @@ const Navbar = () => {
               <ul className="uppercase">
                 {navLinks.map((nl, idx) => (
                   <Link key={idx} href={nl.href}>
-                    <li className="py-4 text-sm">{nl.title}</li>
+                    <li
+                      onClick={() => toggleMobileNav()}
+                      className="py-4 text-sm"
+                    >
+                      {nl.title}
+                    </li>
                   </Link>
                 ))}
               </ul>
               <div className="pt-40">
-                <p className="uppercase tracking-widest text-[#5651e5]">
+                <p className="uppercase tracking-widest text-[#0cad3c]">
                   Let's Connect
                 </p>
                 <div className="w-full sm:w-[80%] my-4 ">

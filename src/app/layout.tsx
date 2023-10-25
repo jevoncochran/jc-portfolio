@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ProjectCtxProvider>
-        <body className={inter.className + "relative"}>
+        <body className={inter.className + "relative .no-scrollbar"}>
           <Navbar />
           {children}
         </body>
