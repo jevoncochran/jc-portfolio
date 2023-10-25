@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import SocialIconContainer from "./SocialIconContainer";
+import Image from "next/image";
 
 const navLinks = [
   { title: "Home", href: "/#home" },
@@ -41,7 +42,9 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <h1>JC</h1>
+        <div>
+          <Image src="/assets/nav/logo.png" alt="JC" width={80} height={80} />
+        </div>
         <div>
           <ul className="hidden md:flex">
             {navLinks.map((nl, idx) => (
