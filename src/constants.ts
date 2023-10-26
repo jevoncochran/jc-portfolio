@@ -1,9 +1,9 @@
 export const PROJECTS = [
   {
-    name: "JCommerce",
+    name: "J-Commerce Client App",
     image: "jcommerce1.png",
     projectType: "Next.js",
-    url: "jcommerce",
+    url: "jcommerce-client",
     type: "Full Stack Application",
     technologies: [
       "React",
@@ -11,14 +11,36 @@ export const PROJECTS = [
       "Typescript",
       "Tailwind CSS",
       "MongoDB",
-      "NextAuth",
-      "Google Cloud Console",
       "Stripe",
+    ],
+    overview: [
+      "The app is the customer-facing marketplace for the J-Commerce project, for which there is also a vendor admin app. It employ a MongoDB database which ensures for flexible and reliable data storage. I used Tailwind CSS to implement the frontend UI. There is seamless payment processing and real-time order tracking thanks to Stripe integration and webhooks.",
+    ],
+    deployedSite: "https://ecommerce-client-liard.vercel.app",
+    repo: "https://github.com/jevoncochran/ecommerce-client",
+  },
+  {
+    name: "J-Commerce Vendor App",
+    image: "jcommerce2.png",
+    projectType: "Next.js",
+    url: "jcommerce-vendor",
+    type: "Full Stack Application",
+    technologies: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Stripe",
+      "Google Cloud",
+      "NextAuth",
       "AWS",
     ],
     overview: [
-      "The project comprises two core elements: a multi-vendor admin app and a customer-facing e-commerce store, both benefiting from secure authentication enabled by NextAuth and the Google Cloud Console. The application relies on a MongoDB database for data storage, boasts an attractive user interface designed using Tailwind CSS, and efficiently manages image assets with AWS. Seamless payment processing and real-time tracking are achieved through Stripe integration and webhooks, ensuring a smooth, secure, and feature-rich e-commerce experience.",
+      "The Vendor Admin App is one of the two apps that comprise the J-Commerce project, with the customer marketplace being the other. This admin app empowers multiple vendors with streamlined control over their products and orders within the e-commerce ecosystem. Leveraging secure authentication through NextAuth and the Google Cloud Console, it offers vendors a secure gateway to manage their storefronts. Data storage is managed efficiently using MongoDB, while the application's user-friendly interface, crafted with Tailwind CSS, ensures an enjoyable user experience. Image assets are seamlessly managed via AWS, and real-time order tracking and seamless payment processing are facilitated through Stripe integration and webhooks.",
     ],
+    deployedSite: "https://ecommerce-admin-beta-orpin.vercel.app",
+    repo: "https://github.com/jevoncochran/ecommerce-admin",
   },
   {
     name: "Google Jocs",
@@ -39,6 +61,8 @@ export const PROJECTS = [
       "A full-stack text editor application meticulously emulating Google Docs in both its UI and functionality. Developed with Next.js, the project employs NextAuth in combination with the Google Provider for secure user authentication. Data storage is managed through Firebase, ensuring robust performance and scalability.",
       "The user interface, designed to be visually appealing and intuitive, is a fusion of Tailwind CSS and Material UI. For text editing capabilities mirroring Google Docs, it makes use of React Draft Wysiwyg and Draft.js libraries, offering a seamless and feature-rich document editing experience.",
     ],
+    deployedSite: "https://google-docs-clone-phi-eight.vercel.app",
+    repo: "https://github.com/jevoncochran/google-docs-clone",
   },
   {
     name: "Campr",
@@ -50,5 +74,7 @@ export const PROJECTS = [
     overview: [
       "This project is the captivating landing page UI for a travel/camping app. Developed with Next.js and TypeScript, this frontend project is a compelling demonstration of my ability to seamlessly translate design concepts into code.",
     ],
+    deployedSite: "https://campr-phi.vercel.app",
+    repo: "https://github.com/jevoncochran/campr",
   },
 ];

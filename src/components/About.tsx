@@ -25,7 +25,7 @@ const About = () => {
           </p>
           <p className="py-2 text-gray-600">
             My tech toolkit includes Next.js, React, Node.js, Typescript, Redux,
-            Stripe, Google Cloud Console, and MongoDB. I'm open to contract and
+            Stripe, Google Cloud, and MongoDB. I'm open to contract and
             full-time roles. Let's connect and explore opportunities.
           </p>
           <Link href="/#projects">
