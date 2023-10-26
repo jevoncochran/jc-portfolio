@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PROJECTS } from "@/constants";
 import { AiFillGithub as GithubIcon } from "react-icons/ai";
 import { MdLaunch as NavigateIcon } from "react-icons/md";
+import Link from "next/link";
 
 const ProductPage = ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -22,13 +23,25 @@ const ProductPage = ({ params }: { params: { slug: string } }) => {
           className="w-full border shadow-lg"
         />
         <div className="flex gap-2 py-4">
-          <button className="primary-btn p-2 flex items-center gap-2">
-            <NavigateIcon /> Demo
-          </button>
-          <button className="second-btn p-2 flex items-center gap-2">
-            <GithubIcon />
-            Repo
-          </button>
+          <Link
+            href={selectedProject?.deployedSite as string}
+            legacyBehavior
+            passHref
+          >
+            <a target="_blank">
+              <button className="primary-btn p-2 flex items-center gap-2">
+                <NavigateIcon /> Demo
+              </button>
+            </a>
+          </Link>
+          <Link href={selectedProject?.repo as string} legacyBehavior passHref>
+            <a target="_blank">
+              <button className="second-btn p-2 flex items-center gap-2">
+                <GithubIcon />
+                Repo
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -57,13 +70,25 @@ const ProductPage = ({ params }: { params: { slug: string } }) => {
           ))}
         </div>
         <div className="md:hidden flex gap-2 px-8 py-4">
-          <button className="primary-btn p-2 flex items-center gap-2">
-            <NavigateIcon /> Demo
-          </button>
-          <button className="second-btn p-2 flex items-center gap-2">
-            <GithubIcon />
-            Repo
-          </button>
+          <Link
+            href={selectedProject?.deployedSite as string}
+            legacyBehavior
+            passHref
+          >
+            <a target="_blank">
+              <button className="primary-btn p-2 flex items-center gap-2">
+                <NavigateIcon /> Demo
+              </button>
+            </a>
+          </Link>
+          <Link href={selectedProject?.repo as string} legacyBehavior passHref>
+            <a target="_blank">
+              <button className="second-btn p-2 flex items-center gap-2">
+                <GithubIcon />
+                Repo
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
