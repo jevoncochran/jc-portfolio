@@ -1,5 +1,29 @@
 export const PROJECTS = [
   {
+    name: "Americana Grill",
+    image: "americana.png",
+    projectType: "Next.js",
+    url: "americana-grill",
+    type: "Full Stack Application",
+    technologies: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Prisma",
+      "PosgreSQL",
+      "Zustand",
+      "Stripe",
+      "React Query",
+      "NextAuth",
+    ],
+    overview: [
+      "Americana Grill is a dynamic full-stack web application meticulously crafted with Next.js and TypeScript, delivering a seamless food ordering experience for customers and efficient order management for administrators. With the power of NextAuth, user authentication is secure and intuitive. The application leverages Prisma and PostgreSQL for robust database management and utilizes Zustand for state management, ensuring a responsive and interactive user interface. Thanks to React Query, asynchronous server state is efficiently handled. The polished aesthetics are achieved with Tailwind CSS, while payment transactions are securely managed through Stripe integration. Americana Grill is a comprehensive solution for food delivery, streamlining the entire process from order placement to menu updates, all wrapped in a modern and user-friendly package.",
+    ],
+    deployedSite: "https://americana-grill-app.vercel.app/",
+    repo: "https://github.com/jevoncochran/americana-grill-app",
+  },
+  {
     name: "J-Commerce Client App",
     image: "jcommerce1.png",
     projectType: "Next.js",
@@ -12,6 +36,7 @@ export const PROJECTS = [
       "Tailwind CSS",
       "MongoDB",
       "Stripe",
+      "NextAuth",
     ],
     overview: [
       "The app is the customer-facing marketplace for the J-Commerce project, for which there is also a vendor admin app. It employ a MongoDB database which ensures for flexible and reliable data storage. I used Tailwind CSS to implement the frontend UI. There is seamless payment processing and real-time order tracking thanks to Stripe integration and webhooks.",
@@ -35,6 +60,7 @@ export const PROJECTS = [
       "Google Cloud",
       "NextAuth",
       "AWS",
+      "NextAuth",
     ],
     overview: [
       "The Vendor Admin App is one of the two apps that comprise the J-Commerce project, with the customer marketplace being the other. This admin app empowers multiple vendors with streamlined control over their products and orders within the e-commerce ecosystem. Leveraging secure authentication through NextAuth and the Google Cloud Console, it offers vendors a secure gateway to manage their storefronts. Data storage is managed efficiently using MongoDB, while the application's user-friendly interface, crafted with Tailwind CSS, ensures an enjoyable user experience. Image assets are seamlessly managed via AWS, and real-time order tracking and seamless payment processing are facilitated through Stripe integration and webhooks.",
